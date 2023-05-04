@@ -57,7 +57,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                             float number, result;
                             num = holder.SquareEditText.getText().toString();
                             if (!num.isEmpty()){
-                                if (num.matches("\\d+")){
+                                if (num.matches("\\d*\\.?\\d+")){
                                     number = Float.parseFloat(num);
                                     result = number * number;
                                     res = Float.toString(result);
@@ -104,7 +104,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                             float number, result;
                             num = holder.SquareEditText.getText().toString();
                             if (!num.isEmpty()){
-                                if (num.matches("\\d+")){
+                                if (num.matches("\\d*\\.?\\d+")){
                                     number = Float.parseFloat(num);
                                     result = 4 * number;
                                     res = Float.toString(result);
@@ -152,7 +152,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                             a = holder.heightEditText.getText().toString();
                             b = holder.widthEditText.getText().toString();
                             if (!(a.isEmpty() | b.isEmpty())) {
-                                if (a.matches("\\d+") & b.matches("\\d+")) {
+                                if (a.matches("\\d*\\.?\\d+") & b.matches("\\d*\\.?\\d+")) {
                                     number1 = Float.parseFloat(a);
                                     number2 = Float.parseFloat(b);
                                     result = number2 * number1;
@@ -203,7 +203,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                             a = holder.heightEditText.getText().toString();
                             b = holder.widthEditText.getText().toString();
                             if (!(a.isEmpty() | b.isEmpty())){
-                                if (a.matches("\\d+") & b.matches("\\d+")){
+                                if (a.matches("\\d*\\.?\\d+") & b.matches("\\d*\\.?\\d+")){
                                     number1 = Float.parseFloat(a);
                                     number2 = Float.parseFloat(b);
                                     result = 2*(number2 + number1);
@@ -253,7 +253,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                             b = holder.baseEditText.getText().toString();
                             h = holder.heightTEditText.getText().toString();
                             if (!(h.isEmpty() | b.isEmpty())){
-                                if (h.matches("\\d+") & b.matches("\\d+")){
+                                if (h.matches("\\d*\\.?\\d+") & b.matches("\\d*\\.?\\d+")){
                                     base = Float.parseFloat(b);
                                     height = Float.parseFloat(h);
                                     result = (float) (0.5 * base * height);
@@ -303,7 +303,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                             b = holder.t2EditText.getText().toString();
                             c = holder.t3EditText.getText().toString();
                             if (!(a.isEmpty() | b.isEmpty()| c.isEmpty())){
-                                if (a.matches("\\d+") & b.matches("\\d+") & c.matches("\\d+")){
+                                if (a.matches("\\d*\\.?\\d+") & b.matches("\\d*\\.?\\d+") & c.matches("\\d*\\.?\\d+")){
                                     A = Float.parseFloat(a);
                                     B = Float.parseFloat(b);
                                     C = Float.parseFloat(c);
@@ -352,7 +352,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                             float radius, result;
                             r = holder.radiusEditText.getText().toString();
                             if (!(r.isEmpty())){
-                                if (r.matches("\\d+")){
+                                if (r.matches("\\d*\\.?\\d+")){
                                     radius = Float.parseFloat(r);
                                     result = (float) (radius * radius * Math.PI);
                                     res = Float.toString(result);
@@ -398,7 +398,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                             float radius, result;
                             r = holder.radiusEditText.getText().toString();
                             if (!(r.isEmpty())){
-                                if (r.matches("\\d+")){
+                                if (r.matches("\\d*\\.?\\d+")){
                                     radius = Float.parseFloat(r);
                                     result = (float) (2 * radius * Math.PI);
                                     res = Float.toString(result);
@@ -446,7 +446,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                             b2 = holder.trapezoid2AEditText.getText().toString();
                             h = holder.TheightEditText.getText().toString();
                             if (!(b1.isEmpty() | b2.isEmpty() | h.isEmpty())){
-                                if (b1.matches("\\d+") && b2.matches("\\d+") && h.matches("\\d+")){
+                                if (b1.matches("\\d*\\.?\\d+") && b2.matches("\\d*\\.?\\d+") && h.matches("\\d*\\.?\\d+")){
                                     base1 = Float.parseFloat(b1);
                                     base2 = Float.parseFloat(b2);
                                     height = Float.parseFloat(h);
@@ -497,7 +497,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                             c = holder.trapezoid3EditText.getText().toString();
                             d = holder.trapezoid4EditText.getText().toString();
                             if (!(a.isEmpty() | b.isEmpty()| c.isEmpty() | d.isEmpty())){
-                                if (a.matches("\\d+") & b.matches("\\d+") & c.matches("\\d+") & d.matches("\\d+")){
+                                if (a.matches("\\d*\\.?\\d+") & b.matches("\\d*\\.?\\d+") & c.matches("\\d*\\.?\\d+") & d.matches("\\d*\\.?\\d+")){
                                     A = Float.parseFloat(a);
                                     B = Float.parseFloat(b);
                                     C = Float.parseFloat(c);
@@ -548,7 +548,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                             b1 = holder.diamond1EditText.getText().toString();
                             b2 = holder.diamond2EditText.getText().toString();
                             if (!(b1.isEmpty() | b2.isEmpty() )){
-                                if (b1.matches("\\d+") && b2.matches("\\d+") ){
+                                if (b1.matches("\\d*\\.?\\d+") && b2.matches("\\d*\\.?\\d+") ){
                                     base1 = Float.parseFloat(b1);
                                     base2 = Float.parseFloat(b2);
                                     result = (float) 0.5 * base1 * base2;
@@ -596,7 +596,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                             a = holder.SquareEditText.getText().toString();
 
                             if (!a.isEmpty()){
-                                if (a.matches("\\d+")){
+                                if (a.matches("\\d*\\.?\\d+")){
                                     A = Float.parseFloat(a);
                                     result = 4 * A ;
                                     res = Float.toString(result);
@@ -644,7 +644,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                             b = holder.baseEditText.getText().toString();
                             h = holder.heightTEditText.getText().toString();
                             if (!(b.isEmpty() | h.isEmpty())){
-                                if (b.matches("\\d+") && h.matches("\\d+")){
+                                if (b.matches("\\d*\\.?\\d+") && h.matches("\\d*\\.?\\d+")){
                                     base = Float.parseFloat(b);
                                     height = Float.parseFloat(h);
                                     result = base * height;
@@ -694,7 +694,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                             a = holder.heightEditText.getText().toString();
                             b = holder.widthEditText.getText().toString();
                             if (!(a.isEmpty() | b.isEmpty())){
-                                if (a.matches("\\d+") & b.matches("\\d+")){
+                                if (a.matches("\\d*\\.?\\d+") & b.matches("\\d*\\.?\\d+")){
                                     A = Float.parseFloat(a);
                                     B = Float.parseFloat(b);
 
