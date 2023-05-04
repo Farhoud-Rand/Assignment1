@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="@color/pink_900"
+        android:fontFamily="@font/noto_naskh_arabic"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/item_rule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:fontFamily="@font/noto_naskh_arabic"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageOfShape"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/heightLayout"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="end"
+        android:layout_margin="20dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/heightEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MyEditViewStyle"
+            android:hint="ادخل الطول (a)" />
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="10dp"/>
+
+        <TextView
+            android:id="@+id/item_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الطول"
+            style="@style/MyTextViewStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/widthLayout"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="end"
+        android:layout_margin="20dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/widthEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ادخل العرض (b)"
+            style="@style/MyEditViewStyle"/>
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="10dp"/>
+
+        <TextView
+            android:id="@+id/item_details1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="العرض"
+            style="@style/MyTextViewStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/SquareLayout"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="end"
+        android:layout_margin="20dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/SquareEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ادخل طول الضلع (s)"
+            style="@style/MyEditViewStyle"/>
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="10dp"/>
+
+        <TextView
+            android:id="@+id/item_details2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="طول الضلع"
+            style="@style/MyTextViewStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/BaseLayout"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="end"
+        android:layout_margin="20dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/baseEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ادخل طول القاعدة (b)"
+            style="@style/MyEditViewStyle"/>
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="10dp"/>
+
+        <TextView
+            android:id="@+id/item_details4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="القاعدة"
+            style="@style/MyTextViewStyle"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/TLayout"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:padding="5dp"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/t1EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="ادخل طول الضلع الاول (a)"
+                style="@style/MyEditViewStyle"/>
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:id="@+id/item_details7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الضلع1"
+                style="@style/MyTextViewStyle"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:padding="5dp"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/t2EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="ادخل طول الضلع الثاني (b)"
+                style="@style/MyEditViewStyle"/>
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:id="@+id/item_details8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الضلع2"
+                style="@style/MyTextViewStyle"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:padding="5dp"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/t3EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="ادخل طول الضلع الثالث (c)"
+                style="@style/MyEditViewStyle"/>
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:id="@+id/item_details9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الضلع3"
+                style="@style/MyTextViewStyle"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/heightForTLayout"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="end"
+        android:layout_margin="20dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/heightTEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ادخل الارتفاع (h)"
+            style="@style/MyEditViewStyle"/>
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="10dp"/>
+
+        <TextView
+            android:id="@+id/item_details3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الارتفاع"
+            style="@style/MyTextViewStyle"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/radiusLayout"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="end"
+        android:layout_margin="20dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/radiusEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ادخل نصف القطر (r)"
+            style="@style/MyEditViewStyle"/>
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="10dp"/>
+
+        <TextView
+            android:id="@+id/item_details5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="نصف القطر"
+            style="@style/MyTextViewStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/trapezoidPLayout"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:padding="5dp"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/trapezoid1EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="ادخل طول الضلع الاول (a)"
+                style="@style/MyEditViewStyle"/>
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:id="@+id/item_details10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الضلع1"
+                style="@style/MyTextViewStyle"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:padding="5dp"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/trapezoid2EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="ادخل طول الضلع الثاني (b)"
+                style="@style/MyEditViewStyle"/>
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:id="@+id/item_details11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الضلع2"
+                style="@style/MyTextViewStyle"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:padding="5dp"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/trapezoid3EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="ادخل طول الضلع الثالث (c)"
+                style="@style/MyEditViewStyle"/>
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:id="@+id/item_details12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الضلع3"
+                style="@style/MyTextViewStyle"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:padding="5dp"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/trapezoid4EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="ادخل طول الضلع الرابع (d)"
+                style="@style/MyEditViewStyle"/>
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:id="@+id/item_details13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الضلع4"
+                style="@style/MyTextViewStyle"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/trapezoidALayout"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:padding="5dp"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/trapezoid1AEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="ادخل طول القاعدة الاولى (a)"
+                style="@style/MyEditViewStyle"/>
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:id="@+id/item_details14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="القاعدة1"
+                android:layout_gravity="right"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:fontFamily="@font/noto_naskh_arabic"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:padding="5dp"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/trapezoid2AEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="ادخل طول القاعدة الثانية (b)"
+                style="@style/MyEditViewStyle"/>
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:id="@+id/item_details15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="القاعدة2"
+                android:layout_gravity="right"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:fontFamily="@font/noto_naskh_arabic"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:padding="5dp"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/TheightEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="ادخل الارتفاع (h)"
+                style="@style/MyEditViewStyle"/>
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:id="@+id/item_details16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الارتفاع"
+                android:layout_gravity="right"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:fontFamily="@font/noto_naskh_arabic"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/diamondLayout"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:padding="5dp"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/diamond1EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="ادخل طول القطر الاول (d1)"
+                style="@style/MyEditViewStyle"/>
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:id="@+id/item_details17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="القطر1"
+                android:layout_gravity="right"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:fontFamily="@font/noto_naskh_arabic"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:padding="5dp"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/diamond2EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="ادخل طول القطر الاول (d2)"
+                style="@style/MyEditViewStyle"/>
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:id="@+id/item_details18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="القطر2"
+                android:layout_gravity="right"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:fontFamily="@font/noto_naskh_arabic"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="احسب النتيجة"
+        android:id="@+id/resultButton"
+        android:visibility="gone"
+        android:textSize="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/resultLayout"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="end"
+        android:layout_margin="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MyTextViewStyle"/>
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="10dp"/>
+
+        <TextView
+            android:id="@+id/item_details6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="النتيجة"
+            style="@style/MyTextViewStyle" />
+
+    </LinearLayout>
+</LinearLayout>

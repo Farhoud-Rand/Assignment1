@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">الاشكال الهندسية</string>
+    <string name="ErrorMessageForEnterCharactersNotNumbers">الرجاء ادخال ارقام فقط</string>
+    <string name="GeneralErrorMessage">الرجاء ادخال الابعاد اولا</string>
+    <string name="AreaOfSquare">مساحة المربع = طول الضلع * طول الضلع</string>
+    <string name="PerimeterOfSquare">المحيط المربع = 4 * طول الضلع</string>
+    <string name="AreaOfRectangle">مساحة المستطيل = الطول * العرض</string>
+    <string name="PerimeterOfRectangle">ميحط المستطيل = 2 *(الطول + العرض)</string>
+    <string name="AreaOfTriangle">مساحة المثلث = 1/2 * القاعدة * الارتفاع</string>
+    <string name="PerimeterOfTriangle">محيط المثلث = مجموع اطوال اضلاعه</string>
+    <string name="AreaOfCircle">مساحة الدائرة = (نصف القطر)^2 * ط</string>
+    <string name="PerimeterOfCircle">محيط الدائرة = 2 * نصف القطر * ط</string>
+    <string name="AreaOfTrapezoid">مساحة شبه المنحرف = 1/2 مجموع طولي قاعدتيه المتوازيتين * الارتفاع</string>
+    <string name="PerimeterOfTrapezoid">محيط شبه المنحرف = مجموع اطوال اضلاعه</string>
+    <string name="AreaOfDiamond">مساحة المعين = 0.5 * طول القطر الاول * طول القطر التاني</string>
+    <string name="PerimeterOfDiamond">محيط المعين = 4 * طول الضلع</string>
+    <string name="AreaOfParallelogram">مساحة متوازي الاضلاع = طول القاعدة * الارتفاع</string>
+    <string name="PerimeterOfParallelogram">محيط متوازي الاضلاع = 2 * (الطول + العرض)</string>
+</resources>
