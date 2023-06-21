@@ -1,25 +1,59 @@
 package com.example.assignment1;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.Switch;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private List<Category> categories;
+    private RecyclerView categoryRecyclerView;
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
+    private Switch aSwitch;
+    boolean darkMode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        aSwitch = findViewById(R.id.switchDarkMode);
+
+        // Initialize SharedPreferences (I use shared preference in order to save the mode)
+        sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        darkMode = sharedPreferences.getBoolean("night",false); // Light mode is the default mode
+
+        // Check the value of the switch
+        if (darkMode){
+            aSwitch.setChecked(true);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+
+        // Update the value in shared preference according to the switch
+        aSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (darkMode){
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    editor = sharedPreferences.edit();
+                    editor.putBoolean("night",false);
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    editor = sharedPreferences.edit();
+                    editor.putBoolean("night",true);
+                }
+                editor.apply();
+            }
+        });
 
         // Populate the list of categories
         categories = new ArrayList<>();
@@ -75,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
         CategoryAdapter categoryAdapter = new CategoryAdapter(categories);
 
         // Get a reference to the RecyclerView in the layout and set the adapter
-        RecyclerView categoryRecyclerView = findViewById(R.id.category_list);
+        categoryRecyclerView = findViewById(R.id.category_list);
         categoryRecyclerView.setAdapter(categoryAdapter);
         categoryRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }

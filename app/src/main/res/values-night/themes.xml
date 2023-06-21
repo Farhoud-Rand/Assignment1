@@ -13,4 +13,31 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <!-- Dark mode -->
+    <!-- Screen background if dark mode on -->
+    <style name="Screen">
+        <item name="android:background">@color/pink_100</item>
+    </style>
+    <!-- Screen background if dark mode on -->
+    <style name="Screen1">
+        <item name="android:background">@color/pink_200</item>
+    </style>
+
+    <!-- Screen background if dark mode on -->
+    <style name="Screen2">
+        <item name="android:background">@color/pink_50</item>
+    </style>
+
+    <!-- Text background if dark mode on -->
+    <style name="Text">
+        <item name="android:textColor">@color/pink_900</item>
+    </style>
+
+    <!-- Button background if dark mode on -->
+    <style name="Button">
+        <item name="android:background">@color/pink_50</item>
+        <item name="android:textColor">@color/pink_700</item>
+    </style>
+
 </resources>

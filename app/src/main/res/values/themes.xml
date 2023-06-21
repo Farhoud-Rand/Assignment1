@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Assignment1" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Assignment1" parent="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/pink_900</item>
         <item name="colorPrimaryVariant">@color/pink_900</item>
@@ -8,9 +8,54 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/pink_700</item>
         <item name="colorSecondaryVariant">@color/pink_900</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">#000000</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <!-- Dark mode customization -->
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <!-- Dark mode customization -->
+        <item name="colorControlActivated">@color/pink_900</item>
+        <!-- Edit text line color customization -->
+        <item name="colorControlNormal">@color/black</item>
+        <!-- Edit text hint color customization -->
+        <item name="android:textColorHint">@color/pink_800</item>
+
+        <!-- Light mode customization -->
+        <item name="colorSwitchThumbNormal">@color/pink_900</item>
+        <item name="android:buttonStyle">@style/MyButton</item>
+
+
+
     </style>
+
+
+    <!-- Customized ActionBar style for dark mode -->
+    <style name="MyActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/pink_900</item>
+    </style>
+
+    <!-- Customized Button style for light mode -->
+    <style name="MyButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/pink_900</item>
+        <item name="android:textColor">@color/pink_50</item>
+    </style>
+
+    <!-- Light mode -->
+    <!-- Screen background if light mode on -->
+    <style name="Screen">
+        <item name="android:background">#FFF</item>
+    </style>
+
+    <!-- Text background if light mode on -->
+    <style name="Text">
+        <item name="android:textColor">#000</item>
+    </style>
+
+    <!-- Button background if light mode on -->
+    <style name="Button">
+        <item name="android:background">?attr/colorPrimaryVariant</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+
 </resources>
